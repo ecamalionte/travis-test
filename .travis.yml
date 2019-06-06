@@ -18,4 +18,4 @@ cache:
         script:
           - mix test
 notifications:
-        webhooks: https://c957c8db.ngrok.io/apps/travis/releases-build/1/build-callback
+        webhooks: https://c957c8db.ngrok.io/api/apps/travis/releases-build/1/build-callback
