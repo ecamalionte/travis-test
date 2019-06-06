@@ -1,20 +1,21 @@
 language: elixir
 cache:
-        directories:
-                - ~/.hex
-                - ~/.mix
-                - deps
-        elixir:
-                - 1.6
-                - 1.7
-                - 1.8
-        otp_release:
-                - 20.3
-                - 21.0
-        matrix:
-                exclude:
-                        - elixir: 1.8
-                          otp_release: 20.3
-                          script:
-                                  - mix test
-
+  directories:
+    - ~/.hex
+    - ~/.mix
+    - deps
+  elixir:
+    - 1.6
+    - 1.7
+    - 1.8
+  otp_release:
+    - 20.3
+    - 21.0
+  matrix:
+    exclude:
+      - elixir: 1.8
+        otp_release: 20.3
+        script:
+          - mix test
+notifications:
+  webhooks: https://9b00508b.ngrok.io/apps/travis/releases-build/1/build-callback
